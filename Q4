@@ -1,0 +1,37 @@
+CODE:
+
+
+#include <stdio.h>
+int main() 
+{
+    int restaurantOpen, itemAvailable, balanceSufficient;
+    printf("Is restaurant Open? (1=Yes, 0=No) ");
+    scanf("%d",&restaurantOpen);
+    printf("Is the item available? (1=Yes, 0=No) ");
+    scanf("%d",&itemAvailable);
+    printf("Is Balance Sufficient? (1=Yes, 0=No) ");
+    scanf("%d", &balanceSufficient);
+    if (restaurantOpen==1)
+    {
+        if (itemAvailable==1)
+        {
+            if (balanceSufficient==1)
+            {
+                printf("Can Order");
+            }
+            else 
+            {
+                printf("Insufficient Balance");
+            }
+        }
+        else 
+        {
+            printf("Item not available");
+        }
+    }
+    else
+    {
+        printf("Restaurant Not open");
+    }
+    return 0;
+}
