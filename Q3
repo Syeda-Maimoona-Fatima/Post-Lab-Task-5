@@ -1,0 +1,36 @@
+CODE:
+
+#include <stdio.h>
+int main() 
+{
+    int appointment, doctorAvailable, registrationCompleted;
+    printf("Do you have an appointment? (1=Yes, 0=No) ");
+    scanf("%d",&appointment);
+    printf("Is the Doctor available? (1=Yes, 0=No) ");
+    scanf("%d",&doctorAvailable);
+    printf("Is Registration completed? (1=Yes, 0=No) ");
+    scanf("%d", &registrationCompleted);
+    if (appointment==1)
+    {
+        if (doctorAvailable==1)
+        {
+            if (registrationCompleted==1)
+            {
+                printf("Can meet the doctor");
+            }
+            else 
+            {
+                printf("registration incomplete");
+            }
+        }
+        else 
+        {
+            printf("doctor not available");
+        }
+    }
+    else
+    {
+        printf("appointment not made");
+    }
+    return 0;
+}
